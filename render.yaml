@@ -1,3 +1,4 @@
+
 services:
   - type: web
     name: wayline-api
@@ -14,9 +15,7 @@ services:
       - key: CLIENT_ORIGIN
         sync: false
       - key: DATABASE_URL
-        fromDatabase:
-          name: wayline-db
-          property: connectionString
+        sync: false
       - key: DATABASE_SSL
         value: "true"
 
@@ -32,7 +31,3 @@ services:
         value: "20"
       - key: VITE_API_URL
         sync: false
-
-databases:
-  - name: wayline-db
-    plan: free
