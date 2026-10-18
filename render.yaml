@@ -19,10 +19,9 @@ services:
       - key: DATABASE_SSL
         value: "true"
 
-  - type: web
+    - type: web
     name: wayline-web
     runtime: static
-    plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
